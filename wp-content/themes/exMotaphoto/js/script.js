@@ -1,5 +1,3 @@
-// (function($) {
-//     'use strict';
 // ============== Fermeture de pop-up ================= //
 document.addEventListener('DOMContentLoaded', () => {
     const closeButton = document.getElementById('close');
@@ -30,8 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // afficher la ref d'image : single.php -> class ref && contenu && ce centenu passe (injecter) en value dans le formulaire champs ref
             const reference = document.querySelector('.ref-val').innerText;
              console.log(reference);
-            let ref = document.querySelector('#refference');
+            let ref = document.querySelector('#reference');
             ref.setAttribute("placeholder", reference);
+            if(window.location === "http://newmotaphoto.local/"){
+              ref.style.display = 'none';
+            }
            // document.querySelector('input[name="reference"]').value = reference;
         })
     }
@@ -140,8 +141,8 @@ function openLightbox(){
      }
      
      slides[slideIndex - 1].style.display = "block";
-     setTimeout(showSlides, 6000); // Change image every 2 seconds
-   }
+     setTimeout(showSlides, 6000);
+    }
   }
    
    

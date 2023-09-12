@@ -11,6 +11,7 @@
         echo do_shortcode('[contact-form-7 id="18" title="Formulaire de contact 1"]');
 		?>
 		</div>
+		
 	</div> 
 </div> 
 

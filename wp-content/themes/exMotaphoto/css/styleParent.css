@@ -83,24 +83,27 @@ a {
   /*************Modal************************/
   .w3-modal-content {
     width: 682px;
-    padding:0px;
-    margin-top:70px;
+    height:800px;
+    padding:10px;
+    margin-top:30px;
+    overflow-y: scroll;
     }
     .formContainer{
       position:relative;
       left:21%;
       padding-bottom:20px;
+      
     }
 
-    .wpcf7-form> p:nth-child(4){
+    /* .wpcf7-form> p:nth-child(4){
     position:relative;
     left:4%;  
     padding-top:20px;
-    }
+    } */
     #ctnBtn{
      text-align: center;
      background-color:#ccc;
-     width:300px;
+     width:375px;
 
     }
 
@@ -114,9 +117,9 @@ a {
     margin:150px auto;
 
   }
-  #sort-dates{
+  /* #sort-dates{
     width:56%;
-  }
+  } */
   .filters_text {
 	font-size: 14px;
 	text-transform: capitalize;
@@ -141,6 +144,9 @@ a {
 
   .w3-select{
    max-width:80% !important;
+  }
+  .w3-select>option::after{
+    background-color: red !important;
   }
 
   .PhotoDisplay{
