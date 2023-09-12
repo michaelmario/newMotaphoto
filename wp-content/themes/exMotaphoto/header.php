@@ -12,7 +12,7 @@
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-    <div class="header w3-border w3-light-white">
+     <div class="header w3-border w3-light-white">
         <div class="w3-bar">
             <div class="logo">
                 <a href="<?php echo home_url('/'); ?>" class="w3-bar-item w3-margin-left">

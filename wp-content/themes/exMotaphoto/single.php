@@ -113,9 +113,29 @@
                 <?php if ($suggestionPhoto->have_posts()) : ?>
                 <?php while ($suggestionPhoto->have_posts()) : $suggestionPhoto->the_post(); ?>
                 <div class="w3-half">
-                    <div class="pic-suggested">
-                       <?php echo the_post_thumbnail(); ?>
-                    </div>
+                <div class="pic-suggested">
+                <div class="img"  dataset-request='<?php echo  $post->ID; ?>'>
+                       <?php echo the_post_thumbnail(); ?>                   
+                            <div class="overlay">
+                                <div class="open-fullscreen" rel="<?php echo the_post_thumbnail_url(); ?>">
+                                    <img rel="<?php the_post_thumbnail_url(); ?>" class="fullscreen"
+                                        src="http://newmotaphoto.local/wp-content/themes/exMotaphoto/assets/images/images/fullscreen.svg"
+                                        alt="Fullscreen">
+                                </div>
+
+                                <div class="eye">
+                                    <a href="<?php echo get_permalink(); ?>">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/images/picture-eye.svg"
+                                            alt="Eye"></a>
+                                </div>
+                                <div class="infos">
+                                    <p class="titleName"><?php echo the_title(); ?></p>
+                                    <p class="nameCate"><?php echo get_field('categorie'); ?></p>
+                                </div>
+                            </div>
+
+                </div>
+                </div>
                 </div>
                 <?php endwhile; ?>
                 <?php endif; ?>

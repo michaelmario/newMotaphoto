@@ -57,7 +57,7 @@ $(document).ready(() => {
 
   $("#load-more").on("click", (e) => {
     e.preventDefault();
-    postPage = "page=2&per_page=8&order=asc";
+    postPage = "page=2&per_page=12&order=asc";
     fetch(postUrl + postPage, {
       method: "GET",
     })
@@ -224,7 +224,5 @@ $(document).ready(() => {
     });
   }
 
-  window.onload = () => {
-    initFilters();
-  };
+  
 });

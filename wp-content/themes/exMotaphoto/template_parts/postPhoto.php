@@ -1,5 +1,5 @@
 <div class="mainContainer">
-        <section>
+        <section id="filterSection">
             <div class="w3-container w3-margin-bottom w3-center">
                 <div class="w3-row">
                     <div class="w3-third w3-section">
@@ -86,8 +86,8 @@
                                             alt="Eye"></a>
                                 </div>
                                 <div class="infos">
-                                    <p><?php echo the_title(); ?></p>
-                                    <p><?php echo $termCategorie->name; ?></p>
+                                    <p class="titleName"><?php echo the_title(); ?></p>
+                                    <p class="nameCate"><?php echo get_field('categorie'); ?></p>
                                 </div>
                             </div>
                         </div>

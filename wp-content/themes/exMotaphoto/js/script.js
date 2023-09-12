@@ -23,16 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         filledBtn.addEventListener('click', function () {
             const popupOverlay = document.querySelector('.popup');
-            popupOverlay.classList.add('active');
-            // ici le code pour afficher la ref
-            // afficher la ref d'image : single.php -> class ref && contenu && ce centenu passe (injecter) en value dans le formulaire champs ref
+            popupOverlay.classList.add('active');            
             const reference = document.querySelector('.ref-val').innerText;
-             console.log(reference);
-            let ref = document.querySelector('#reference');
+             let ref = document.querySelector('#reference');
             ref.setAttribute("placeholder", reference);
-            if(window.location === "http://newmotaphoto.local/"){
-              ref.style.display = 'none';
-            }
+            
            // document.querySelector('input[name="reference"]').value = reference;
         })
     }
@@ -41,10 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const popupOverlay = document.querySelector('.popup');
         popupOverlay.classList.add('active');
-        
-
-        // console.log('you have activated popup'); 
-        //console.log(contactBtn);
+        if(window.location.href === "http://newmotaphoto.local/"){
+              let referenceLabel = document.querySelector('#referenceLabel');
+              referenceLabel.style.display="none";
+            }else{
+              referenceLabel.style.display="block";
+            }       
     })
 });
 
@@ -78,11 +75,12 @@ function openLightbox(){
     document.querySelectorAll('.fullscreen').forEach(open => {
          open.addEventListener('click', function (e) {
             const lightboxSpace = document.querySelector('.lightbox');
-            let overlayImg  = e.target.parentNode.getAttribute('rel');
+            lightboxSpace.classList.add('active');                    
+           let overlayImg  = e.target.parentNode.getAttribute('rel');
            // let lightboxImgSrc = this.getAttribute('rel');
             let lightboxImage = document.querySelector('.image-lightbox');
               lightboxImage.src = overlayImg;            
-              lightboxSpace.classList.add('active');
+              
             })
     });
     const closeLightbox = document.getElementById('close-lightbox');

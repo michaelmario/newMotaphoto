@@ -192,7 +192,9 @@
       line-height: 3;
       display:none;
     }
-    
+    /* #filterSection{
+      margin-top:-150px;
+    } */
     /********************footer media *************/
    .my-footer-menu{
       flex-direction: column !important;
@@ -231,5 +233,5 @@
     .hide {
       display: none;
     }
-   
+    
     
