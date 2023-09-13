@@ -116,7 +116,7 @@
                     <div class="w3-half">
                         <div class="pic-suggested">
                             <div class="img" dataset-request='<?php echo  $post->ID; ?>'>
-                               <img src="<?php echo the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" >
+                               <img src="<?php echo the_post_thumbnail_url('large-custom'); ?>" alt="<?php the_title(); ?>" >
                                 <div class="overlay">
                                     <div class="open-fullscreen" rel="<?php echo the_post_thumbnail_url(); ?>">
                                         <img rel="<?php the_post_thumbnail_url(); ?>" class="fullscreen"
@@ -145,12 +145,12 @@
             </div>
 
         </div>
-        <?php $archivePage = get_post_type_archive_link( 'photos' ); ?>
-        <div class="w3-margin w3-center">
-            <a class="w3-button w3-gray" href="<?php echo get_site_url(); ?>">Toutes les photos</a>
-        </div>
+        
     </section>
-    
+     <div class="w3-margin w3-center buttonContainer_basPage">
+            <a class="w3-button w3-gray" href="<?php echo get_site_url(); ?>">Toutes les photos</a>
+           
+        </div>
 </div>
 </div>
 <?php endwhile ?>
