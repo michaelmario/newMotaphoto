@@ -94,7 +94,8 @@ function openLightbox(){
 //====================================== Burger menu =========================//
       const burgerMenuIcon = document.querySelector('.burger-menu-open');
       const closeIcon = document.querySelector('.burger-menu-close'); 
-      const menu = document.querySelector('.burger-menu-opened');
+      const menu = document.querySelector('.Mobile-menu');
+      const menuLinks = document.querySelector('.burger-menu-links');
     function openBurgerMenu() {
     const openMenuIcons = document.querySelector('.burger-menu-icons');
     openMenuIcons.addEventListener('click', () => {
@@ -102,6 +103,7 @@ function openLightbox(){
         burgerMenuIcon.classList.remove('active');
         closeIcon.classList.add('active');
         menu.classList.add('active');
+        menuLinks.classList.add('active');
       } else {
         burgerMenuIcon.classList.add('active');
         closeIcon.classList.remove('active');
@@ -114,6 +116,7 @@ function openLightbox(){
 
     });
   }
+
   openBurgerMenu();
   function closeBurgerMenu(e){
     burgerMenuIcon.classList.add('active');

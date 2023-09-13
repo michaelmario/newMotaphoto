@@ -38,15 +38,15 @@
         </div>
         <!-- ajout de menu burger: une fois la fenetre ouverte -->
         <div class="burger-menu-opened w3-theme-d1">
-            <div class="header-logo-close">
+            <!-- <div class="header-logo-close">
                 <a href="<?php echo home_url('/'); ?>">                   
                     <img id="logo-mobile"
                         src="<?php echo get_template_directory_uri(); ?>/assets/images/images/logo.png" alt="Logo">
                 </a>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/images/menu-cross-close.svg"
+                
+            </div> -->
+<img src="<?php echo get_template_directory_uri(); ?>/assets/images/images/menu-cross-close.svg"
                     alt="Burger menu close icon" class="burger-menu-close">
-            </div>
-
 
             <div class="burger-menu-links">
                 <?php
