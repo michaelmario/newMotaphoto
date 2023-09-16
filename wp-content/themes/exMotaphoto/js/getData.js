@@ -4,6 +4,7 @@ let postPage = "page=1&per_page=16&order=asc";
 let postUrl = `http://newmotaphoto.local/wp-json/wp/v2/photo?${postPage}`;
 let postData = "";
 $(document).ready(() => {
+  /*******************Animation sur le site */
   AOS.init({
     initClassName: "aos-init",
     startEvent: "DOMContentLoaded",
@@ -11,9 +12,11 @@ $(document).ready(() => {
   setInterval(() => {
     openLightbox();
   }, "1000");
+
+  /*************la fonction ajax pour les filter ********************************/
   function sendRequest(filters) {
     $.ajax({
-      url: postUrl,
+      url: postUrl + postPage,
       method: "GET",
       dataType: "json",
       success: function (data) {
@@ -25,6 +28,7 @@ $(document).ready(() => {
       },
     });
   }
+  /***************Les filter sont charger que sur la page d'accueil */
 
   if (window.location.href == "http://newmotaphoto.local/") {
     initFilters();
@@ -55,6 +59,7 @@ $(document).ready(() => {
     }
   }
 
+  /**********************Le bouton charger plus********************* */
   $("#load-more").on("click", (e) => {
     e.preventDefault();
     postPage = "page=2&per_page=12&order=asc";
@@ -94,6 +99,7 @@ $(document).ready(() => {
       });
   });
 
+  /*********Créer le html pour affiché les photos */
   function createHTML(filters, data) {
     $(".photo-grid").html("");
     data.forEach((element) => {

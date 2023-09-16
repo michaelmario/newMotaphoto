@@ -22,7 +22,6 @@ add_action('wp_enqueue_scripts', 'style_motaphoto');
 function my_scripts()
 {
     wp_enqueue_script('JQUERY','https://code.jquery.com/jquery-3.4.1.min.js',false ,true);
-    // wp_enqueue_script('scriptJson', get_stylesheet_directory_uri() . '/js/DataRender.js', array('JQUERY'), false, true);
     wp_enqueue_script('scriptJson', get_stylesheet_directory_uri() . '/js/getData.js', array('JQUERY'), false, true);
     wp_enqueue_script('script', get_stylesheet_directory_uri() . '/js/script.js', array('JQUERY'), false, true);
     wp_enqueue_script('AosScript',"https://unpkg.com/aos@2.3.1/dist/aos.js", true); 

@@ -10,5 +10,5 @@
 
 get_template_part( 'template_parts/postPhoto');
 ?>
-
+</div>
 <?php get_footer(); ?>

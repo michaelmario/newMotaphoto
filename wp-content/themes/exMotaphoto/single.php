@@ -1,6 +1,6 @@
 <!-- 
     Fichier qui détermine la mise en forme des posts individuels.
-    Template dédiée à l’affichage d’un seul Post.
+    Template dédiée à l’affichage d’une seul Post.
 -->
 <?php get_header(); ?>
 
@@ -22,8 +22,8 @@
             </div>
         </div>
         <div class="w3-half w3-margin-top">
-            <div class="image_single_container w3-center">
-                <img src="<?php echo the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title() ?>" class="w3-image">
+            <div class="image_single_container">
+                <img src="<?php echo the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title() ?>" class="imgSingle">
                 <div class="overlay">
                     <div class="open-fullscreen" rel="<?php echo the_post_thumbnail_url(); ?>">
                         <img rel="<?php echo the_post_thumbnail_url(); ?>" class="fullscreen"

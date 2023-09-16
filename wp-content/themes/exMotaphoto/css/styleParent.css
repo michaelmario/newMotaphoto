@@ -83,10 +83,11 @@ a {
   /*************Modal************************/
   .w3-modal-content {
     width: 682px;
-    height:800px;
+    height:730px;
     padding:10px;
-    margin-top:30px;
-    overflow-y: scroll;
+    margin-top:60px;
+
+    /* overflow-y: scroll; */
     }
     .formContainer{
       position:relative;
@@ -114,7 +115,10 @@ a {
     max-width:1200px;
     height:auto;
     min-height: 600px;
-    margin:195px auto;
+    margin-top:195px;
+    margin-bottom:5Opx;
+    margin-right: auto;
+    margin-left:auto;
 
   }
   /* #sort-dates{
@@ -358,11 +362,11 @@ visibility:visible;
 .page-container{
   margin:0px 15px;
 }
-.title-type{
+/* .title-type{
     position:relative; 
-    padding-top:25.9%;
+    padding-top:38.7%;
     border-bottom: 2px solid black;
-   }
+   } */
    .title-type >p{
      font-family: space Mono;
      font-weight: 400;
@@ -380,19 +384,19 @@ visibility:visible;
    #contact-filled{
     width:50%;
    }
-   .image_single_container{
+    .image_single_container{
     width:100%;
     height:auto;
     max-height:70vh;
     object-fit: contain;
-    text-align:center;
-   }
+    
+   }/*
    .image_single_container>img{
      max-height:70vh;
      height:auto;
      object-fit: cover;
     
-   }
+   } */
    .image_single_container>.overlay{
     visibility: hidden;
     position: relative;
@@ -465,15 +469,15 @@ visibility:visible;
      max-height: 80px;
      width: auto;
      margin-top: 10px;
-     margin-right: 20px;
+     margin-right:-20px;
    }
    .arrows{
    margin-top: 5px;
     display: flex;
-    gap:9%;
-    width: 100%;
+    gap:15%;
+    width: 107%;
     justify-content: flex-end;
-    margin-right: 40px;
+    
 }
    .arrows img {
      max-height: 20px;
@@ -524,16 +528,16 @@ visibility:visible;
     flex-direction:row;
     justify-content:center;
      text-align: center;
-     height:100px;
-     padding-top:14px;
+     height:40px;
+     
     }
    .my-footer-menu >li{
-     padding-top:10px;
+      padding-top:2px;
      font-family: space Mono;
      font-weight: 400;
      font-size: 14px;
-     line-height:47px;
-     margin-right:20px;
+     line-height:27px;
+     margin-right:90px;
    }
    .Footerbordertop{
     border-top:1px solid #000;

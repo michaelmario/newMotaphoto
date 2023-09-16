@@ -1,8 +1,8 @@
 <div class="mainContainer">
     <section id="filterSection">
-        <div class="w3-container w3-margin-bottom w3-center">
+        <div class="w3container w3-margin-bottom">
             <div class="w3-row">
-                <div class="w3-third w3-section">
+                <div class="w3-col m3  w3-section">
                     <form id="filter-cat" class="js-filter-form" method="GET">
                         <select name="categories" id="categories-select"
                             class="w3-select w3-padding letters-transform w3-border">
@@ -20,7 +20,7 @@
                     </form>
                 </div>
 
-                <div class="w3-third w3-section">
+                <div class="w3-col m3 w3-section">
                     <form id="filter-formats" method="GET">
                         <select name="format" id="filter-select"
                             class="w3-select w3-padding letters-transform w3-border">
@@ -35,7 +35,7 @@
                         <!-- </div> -->
                     </form>
                 </div>
-                <div class="w3-third w3-section">
+                <div class="w3-col m3 w3-right w3-section" id="lastSection">
                     <form id="filter-date" method="GET">
                         <select name="sort" id="sort-dates" class="w3-select w3-padding letters-transform w3-border">
                             <option class="w3-margin" value="">Trier par</option>
